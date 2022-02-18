@@ -31,6 +31,11 @@ jobs:
     - name: Cleanup after tests
       run: cargo clean
 
+    - name: Set Swap Space
+      uses: pierotofy/set-swap-space@master
+      with:
+        swap-size-gb: 10
+
     - name: Build optimized binary
       run: cargo build --release --verbose
 
@@ -121,6 +126,11 @@ jobs:
 
     - name: Check targets are installed correctly
       run: rustup target list --installed
+
+    - name: Set Swap Space
+      uses: pierotofy/set-swap-space@master
+      with:
+        swap-size-gb: 10
 
     - name: Build optimized binary
       run: |
