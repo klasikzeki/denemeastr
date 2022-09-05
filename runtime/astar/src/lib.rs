@@ -680,7 +680,8 @@ parameter_types! {
     /// * Shibuya: 81
     /// * Shiden: 336
     /// * Astar:  592
-    pub ChainId: u64 = 0x250;
+    /// * Astar-Rococo: 692
+    pub ChainId: u64 = 0x2B4;
     /// EVM gas limit
     pub BlockGasLimit: U256 = U256::from(
         NORMAL_DISPATCH_RATIO * MAXIMUM_BLOCK_WEIGHT / WEIGHT_PER_GAS
